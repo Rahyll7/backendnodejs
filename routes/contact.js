@@ -14,8 +14,10 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const contactName = new Contact({
-    name: req.body.name,
-    number: req.body.number,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    password: req.body.password,
+    cofirmPassword:req.body.cofirmPassword
   });
   try {
     const contactPost = await contactName.save();

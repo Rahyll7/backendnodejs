@@ -1,14 +1,25 @@
 const mongoose = require('mongoose')
 
 const contactSchema = new mongoose.Schema({
-    name:{
+    firstName:{
         type: String,
         required:true
     },
-    number:{
-        type:Number,
+    lastName:{
+        type: String,
+        required:true
+    },
+    password:{
+        type: String,
+        required:true
+    },
+    cofirmPassword:{
+        type: String,
         required:true
     }
+
+
+
 })
 
 module.exports = mongoose.model('Contact',contactSchema)
