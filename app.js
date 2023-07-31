@@ -4,6 +4,7 @@ const url =
   "mongodb+srv://rahildb:MTnWxvW5qNoAQGg6@cluster0.dksldog.mongodb.net/";
 
 const app = express();
+const cors = require("cors");
 
 try {
   mongoose
@@ -22,6 +23,7 @@ try {
   console.log(error);
 }
 
+app.use(cors());
 app.use(express.json())
 
 const contactRouter = require("./routes/contact");
